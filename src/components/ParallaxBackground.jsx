@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { Particles } from "./Particles";
 
 function ParallaxBackground() {
   const { scrollYProgress } = useScroll();
@@ -13,16 +14,25 @@ function ParallaxBackground() {
     <section className="absolute inset-0 bg-black/40">
       <div className="relative h-screen overflow-y-hidden">
         {/* Background Sky */}
-        <div
+        {/* <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={{
             backgroundImage: "url(/assets/sky.jpg)",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
-        />
+        /> */}
+        <div className="relative ">
+          <Particles
+            className="absolute inset-0  w-full h-screen -z-50"
+            quantity={1000}
+            ease={80}
+            color={"#ffffff"}
+            refresh
+          />
+        </div>
         {/* Mountain Layer 3 */}
-        <motion.div
+        {/* <motion.div
           className="absolute inset-0 -z-40"
           style={{
             backgroundImage: "url(/assets/mountain-3.png)",
@@ -30,7 +40,7 @@ function ParallaxBackground() {
             backgroundSize: "cover",
             y: mountain3Y,
           }}
-        />
+        /> */}
         {/* Planets */}
         <motion.div
           className="absolute inset-0 -z-30"
