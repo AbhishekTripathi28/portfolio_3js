@@ -33,7 +33,7 @@ function About() {
         },
       ]
   return (
-    <section className="sm:px-10 px-5 lg:px-15 min-h-screen mt-20 md:mt-30"
+    <section className="c-space section-spacing"
     id="about">
       <div className=" flex justify-start items-center flex-col  md:w-[100%]">
       <h2 className="text-heading self-start">About me</h2>
@@ -137,8 +137,8 @@ function About() {
               allow me to build robust and scalable applications
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[70%] 
-          md:start-[50%]
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[60%] max-sm:start[60%] lg:start-[80%]
+          md:start-[95%]
           md:scale-125">
             <Frameworks/>
           </div>
